@@ -1,0 +1,111 @@
+/* src/components/AccountRegistrationForm.css */
+
+.registration-container {
+  /* Matching the dark background from Figma's "Purple Place" section */
+  background-color: #311B47; /* A deep, rich purple from the Figma palette */
+  padding: 40px; /* Increased padding for more space */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  width: 100%;
+  max-width: 420px; /* Slightly wider for better field appearance */
+  margin: 20px auto;
+  font-family: 'Inter', sans-serif; /* Assuming a modern sans-serif font like Inter based on Figma default */
+  text-align: center;
+  color: white; /* Default text color for the container */
+}
+
+.registration-container h2 {
+  color: white; /* Heading text color */
+  margin-bottom: 30px; /* More space below heading */
+  font-size: 28px; /* Slightly larger heading */
+  font-weight: 600; /* Medium bold */
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* More space between form groups */
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px; /* More space below label */
+  color: white; /* Label text color */
+  font-weight: 500; /* Medium font weight */
+  font-size: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 14px; /* Increased padding inside inputs */
+  border: none; /* No default border */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for input background */
+  border-radius: 8px; /* Rounded input corners */
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white; /* Input text color */
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighter placeholder text */
+}
+
+.form-group input:focus {
+  border: 1px solid #A36FFF; /* A thin border on focus matching button hover */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(163, 111, 255, 0.3); /* Softer glow on focus */
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly brighter on focus */
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 15px; /* More margin above checkbox */
+  justify-content: flex-start;
+}
+
+.checkbox-group input[type="checkbox"] {
+  /* Basic styling for checkbox, actual design can be complex */
+  margin-right: 10px;
+  width: 18px; /* Adjust size if needed */
+  height: 18px; /* Adjust size if needed */
+  accent-color: #A36FFF; /* Changes checkbox color in modern browsers */
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+  color: white; /* Checkbox label color */
+}
+
+.submit-button {
+  /* Matching the vibrant purple/pink button from Figma */
+  background-color: #441e86;
+  color: white;
+  padding: 15px 25px; /* More padding for a larger button */
+  border: none;
+  border-radius: 25px; /* Very rounded button */
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px; /* More space above button */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
+}
+
+.submit-button:hover {
+  background-color: #e85757; /* Slightly darker purple on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.error-message {
+  color: #FF6B6B; /* A more vibrant red for error */
+  font-size: 0.9em;
+  margin-top: 5px;
+  text-align: left;
+}

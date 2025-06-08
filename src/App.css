@@ -1,0 +1,39 @@
+/* src/App.css */
+
+/* Basic reset and global styling for the entire page */
+body {
+  /* Add these lines inside the existing body {} block in src/App.css */
+background-image: url('/images/background\ signup.jpg'); /* !! REMEMBER TO REPLACE THIS WITH YOUR ACTUAL IMAGE PATH AND NAME !! */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+  margin: 0; /* Remove default browser margin */
+  padding: 0; /* Remove default browser padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: 'Inter', sans-serif; /* Keep consistent font */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  display: flex; /* Use flexbox for body to center its content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #f0f2f5; /* A very light grey background for the overall page */
+  /* You can change this background-color to match your overall app theme */
+}
+
+/* Styles for the root div where your React app is mounted */
+#root {
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  width: 100%; /* Take full width of its parent (body) */
+  display: flex; /* Use flexbox to center content inside root */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Styles for the top-level App component container */
+.App {
+  /* This is the container for your AccountRegistrationForm component */
+  display: flex;
+  justify-content: center; /* Center the form horizontally within this container */
+  align-items: center; /* Center the form vertically within this container */
+  width: 100%; /* Ensure it takes full width of its parent */
+  height: 100%; /* Ensure it takes full height of its parent */
+}
