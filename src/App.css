@@ -3,7 +3,7 @@
 /* Basic reset and global styling for the entire page */
 body {
   /* Add these lines inside the existing body {} block in src/App.css */
-background-image: url('/images/background\ signup.jpg'); /* !! REMEMBER TO REPLACE THIS WITH YOUR ACTUAL IMAGE PATH AND NAME !! */
+background-image: url('/images/background-signup.jpg'); /* !! REMEMBER TO REPLACE THIS WITH YOUR ACTUAL IMAGE PATH AND NAME !! */
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -17,7 +17,6 @@ background-repeat: no-repeat;
   align-items: center; /* Center vertically */
   background-color: #f0f2f5; /* A very light grey background for the overall page */
   /* You can change this background-color to match your overall app theme */
-}
 
 /* Styles for the root div where your React app is mounted */
 #root {
