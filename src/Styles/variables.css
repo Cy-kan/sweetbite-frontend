@@ -1,0 +1,10 @@
+/* src/styles/variables.css */
+:root {
+  --primary-color: #D8558A; /* Pink/Magenta */
+  --secondary-color: #A03D6D; /* Darker Pink/Purple */
+  --text-dark: #333;
+  --text-light: #f4f4f4;
+  --background-light: #f4f4f4;
+  --secondary-bg-light: #FFFFFF; /* White for forms/cards */
+  --border-color: #ddd;
+}

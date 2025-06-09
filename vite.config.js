@@ -1,9 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react' // <--- This line is important!
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()], // <--- And this line is important!
+  plugins: [react()], // Make sure this line is present
   server: {
-    port: 201
-  }
-})
+    port: 201 // Your custom port
+  },
+  optimizeDeps: {
+    include: ['fabric'], // This line is crucial for Fabric.js
+  },
+});

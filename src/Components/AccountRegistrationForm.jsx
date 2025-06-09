@@ -1,127 +1,96 @@
 // src/components/AccountRegistrationForm.jsx
 import React, { useState } from 'react';
-import './AccountRegistrationForm.css';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './AccountRegistrationForm.css'; // Make sure this CSS exists and is linked
 
-function AccountRegistrationForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
-  // --- NEW STATE FOR ERROR HANDLING ---
-  const [passwordError, setPasswordError] = useState(''); // State to hold password mismatch error message
+const AccountRegistrationForm = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
 
-    // --- NEW VALIDATION LOGIC ---
-    if (password !== confirmPassword) {
-      setPasswordError('Passwords do not match!'); // Set the error message
-      return; // Stop the form submission
-    } else {
-      setPasswordError(''); // Clear the error if they match (in case it was set previously)
-    }
-
-    // If validation passes, proceed with submission
-    console.log('Account Registration Data:', {
-      name,
-      email,
-      password,
-      rememberMe,
-    });
-    alert('Form submitted! Check console for data.');
-    // In a real application, you would send this data to a backend API
-    // You might clear the form here:
-    // setName('');
-    // setEmail('');
-    // setPassword('');
-    // setConfirmPassword('');
-    // setRememberMe(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  // --- NEW HANDLERS TO CLEAR ERROR ON CHANGE ---
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-    if (passwordError && e.target.value === confirmPassword) {
-      setPasswordError(''); // Clear error if current password matches confirmPassword
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Basic client-side validation (add more robust validation as needed)
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match!');
+      return;
     }
-  };
+    // In a real application, you'd send this data to a backend API
+    console.log('Account Registration Data:', formData);
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-    if (passwordError && e.target.value === password) {
-      setPasswordError(''); // Clear error if confirmPassword matches password
-    }
+    // Simulate successful registration and navigate to the address page
+    alert('Registration successful! Redirecting to address entry.');
+    navigate('/addresses'); // Navigate to the address entry page
   };
 
   return (
     <div className="registration-container">
-      <h2>Account Registration</h2>
+      <h2>Register Your SweetBite Account</h2>
       <form onSubmit={handleSubmit} className="registration-form">
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="username">Username:</label>
           <input
             type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your name"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
-            value={password}
-            onChange={handlePasswordChange} // Use new handler
-            placeholder="Enter your password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
             type="password"
             id="confirmPassword"
-            value={confirmPassword}
-            onChange={handleConfirmPasswordChange} // Use new handler
-            placeholder="Confirm your password"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
             required
           />
-          {/* --- NEW ERROR MESSAGE DISPLAY --- */}
-          {passwordError && <p className="error-message">{passwordError}</p>}
         </div>
-
-        <div className="form-group checkbox-group">
-          <input
-            type="checkbox"
-            id="rememberMe"
-            checked={rememberMe}
-            onChange={(e) => setRememberMe(e.target.checked)}
-          />
-          <label htmlFor="rememberMe">Remember Me</label>
-        </div>
-
-        <button type="submit" className="submit-button">Sign up</button>
+        <button type="submit">Register</button>
       </form>
+      <p className="login-link-text">
+        Already have an account? <a href="#">Login</a> {/* This will be a Router Link later */}
+      </p>
     </div>
   );
-}
+};
 
 export default AccountRegistrationForm;
