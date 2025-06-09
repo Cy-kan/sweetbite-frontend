@@ -1,6 +1,6 @@
 // src/components/CustomCakeDesigner.jsx
 import React, { useRef, useEffect, useState } from 'react';
-import { fabric } from 'fabric'; // Import fabric
+import Fabric  from 'fabric'; // Import fabric
 
 import './CustomCakeDesigner.css'; // We'll create this CSS file next
 
