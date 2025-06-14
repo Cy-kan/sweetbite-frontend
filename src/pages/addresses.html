@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetBite - Add Address</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../components/AddressPage.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="home.html" class="logo">SweetBite</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="addresses.html">Addresses</a></li>
+                <li><a href="../../index.html">Register</a></li>
+                <li><a href="login.html">Login</a></li> </ul>
+        </nav>
+    </header>
+
+    <div class="address-container">
+        <h2>Add New Delivery Address</h2>
+        <p>Enter the details for your new delivery location.</p>
+        
+        <form id="add-address-form" class="address-form">
+            <div class="form-group">
+                <label for="county">County:</label>
+                <input type="text" id="county" name="county" required>
+            </div>
+            <div class="form-group">
+                <label for="constituency">Constituency:</label>
+                <input type="text" id="constituency" name="constituency" required>
+            </div>
+            <div class="form-group">
+                <label for="estateStreetRoad">Estate/Street/Road:</label>
+                <input type="text" id="estateStreetRoad" name="estateStreetRoad" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description (e.g., nearest landmark):</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div id="address-error" class="error-message"></div>
+            <button type="submit" id="submit-new-address-btn">Submit Address</button>
+        </form>
+        
+        <div class="address-links">
+            <a href="home.html">Back to Home</a> |
+            <a href="../../index.html">Logout</a>
+        </div>
+    </div>
+
+    <script src="../js/addresses.js"></script>
+</body>
+</html>

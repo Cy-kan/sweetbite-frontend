@@ -1,4 +1,3 @@
-/* src/components/AddressPage.css */
 .address-container {
   background-color: var(--secondary-bg-light);
   padding: 30px;
@@ -6,34 +5,39 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 90%;
-  max-width: 450px;
+  max-width: 500px; /* Adjust max-width as needed for the form */
   margin-top: 20px;
   color: var(--text-dark);
 }
 
 .address-container h2 {
-  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.address-container p {
   margin-bottom: 25px;
 }
 
 .address-form .form-group {
-  margin-bottom: 20px;
-  text-align: left;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .address-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
+/* Ensure inputs are styled correctly within the form */
 .address-form input[type="text"] {
-  width: calc(100% - 20px); /* Account for padding */
-  padding: 12px 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
-  box-sizing: border-box; /* Include padding in width calculation */
+    width: calc(100% - 22px); /* Adjusting for padding and border */
+    padding: 12px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-top: 5px;
 }
 
 .address-form input[type="text"]:focus {
@@ -42,25 +46,45 @@
   box-shadow: 0 0 5px rgba(var(--primary-color), 0.5);
 }
 
-.address-form button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Error message styling (reusing existing from index.css principles) */
+.error-message {
+  color: #D32F2F; /* A distinct red color for errors */
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+  min-height: 1.2em; /* Reserve space to prevent layout shift */
 }
 
-.address-form button:hover {
-  background-color: #A03D6D;
-  transform: translateY(-2px);
+/* Adjustments for the submit button */
+#submit-new-address-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 150px;
 }
 
-/* Responsive adjustments */
+#submit-new-address-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.address-links {
+    margin-top: 30px;
+    font-size: 0.95em;
+}
+
+.address-links a {
+    margin: 0 10px;
+}
+
 @media (max-width: 600px) {
   .address-container {
     padding: 20px;
