@@ -7,26 +7,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="src/index.css">
     <link rel="stylesheet" href="src/styles/variables.css">
     <link rel="stylesheet" href="src/components/AccountRegistrationForm.css">
 </head>
 <body>
-    <body>
     <header class="main-header">
-        <a href="src/pages/home.html" class="logo">SweetBite</a>
+        <a href="index.html" class="logo">SweetBite</a>
         <nav class="main-nav">
             <ul>
                 <li><a href="src/pages/home.html">Home</a></li>
                 <li><a href="src/pages/addresses.html">Addresses</a></li>
-                <li><a href="./index.html">Register</a></li> <li><a href="src/pages/login.html">Login</a></li>
+                <li><a href="index.html">Register</a></li>
+                <li><a href="src/pages/login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="registration-container">
-        <h2>Register Your SweetBite Account</h2>
-        <form id="registration-form" class="registration-form">
+        <h1>Register for SweetBite</h1>
+        <form class="registration-form">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -40,17 +41,13 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-            <div id="password-match-error" class="error-message"></div>
-            <button type="submit">Register</button>
+            <button type="submit" class="register-button">Register</button>
         </form>
-        <p class="login-link-text">
-            Already have an account? <a href="src/pages/login.html">Login</a>
-        </p>
+        <p class="login-link">Already have an account? <a href="src/pages/login.html">Login here</a></p>
     </div>
-
 
     <script src="src/js/register.js"></script>
 </body>

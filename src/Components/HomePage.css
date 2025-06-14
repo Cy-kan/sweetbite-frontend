@@ -118,12 +118,11 @@
     color: #666;
 }
 
-/* --- NEW: About Us Section Styling --- */
 .about-us-section {
     margin-top: 50px;
     margin-bottom: 50px;
     padding-top: 30px;
-    border-top: 1px solid var(--border-color); /* Visual separator */
+    border-top: 1px solid var(--border-color);
     text-align: center;
 }
 
@@ -136,11 +135,10 @@
 .about-us-section p {
     font-size: 1.1em;
     line-height: 1.8;
-    max-width: 600px; /* Limit line length for readability */
-    margin: 0 auto 20px auto; /* Center paragraphs and add bottom margin */
+    max-width: 600px;
+    margin: 0 auto 20px auto;
     color: var(--text-dark);
 }
-/* --- END NEW Section Styling --- */
 
 .cta-text {
     font-size: 1.4em;
