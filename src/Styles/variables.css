@@ -1,10 +1,13 @@
 /* src/styles/variables.css */
 :root {
-  --primary-color: #D8558A; /* Pink/Magenta */
-  --secondary-color: #A03D6D; /* Darker Pink/Purple */
-  --text-dark: #333;
-  --text-light: #f4f4f4;
-  --background-light: #f4f4f4;
-  --secondary-bg-light: #FFFFFF; /* White for forms/cards */
-  --border-color: #ddd;
+  --primary-color: #D8558A;        /* Your existing Pink/Magenta */
+  --secondary-color: #A03D6D;       /* Your existing Darker Pink/Purple */
+
+  /* New/Adjusted Background and Text Colors */
+  --background-light: #F8F0FA;     /* Very Light Pink/Lavender for overall page background */
+  --secondary-bg-light: #FFFFFF;   /* Pure White for forms and cards (like the registration box) */
+
+  --text-dark: #333333;            /* Dark Gray for primary text */
+  --text-light: #f4f4f4;           /* Light text (e.g., on buttons) */
+  --border-color: #E0BBE4;         /* Soft Purple for borders (lighter than secondary-color) */
 }
